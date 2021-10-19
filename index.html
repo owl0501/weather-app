@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/main.css">
+    
+    <title>Weather App</title>
+</head>
+
+<body class="dark-theme">
+    <div class="mobile-wrap">
+        <div class="header">
+            <div class="search-wrap">
+                <input type="text" id="input-search" placeholder="輸入大寫國字">
+                <span>縣市</span>
+            </div>
+            <div class="townselect-wrap">
+                <select id="townships" class="select-townships">
+                    <option value="0">復興區</option>
+                </select>
+                <span>鄉鎮</span>
+            </div>
+            <div id="btn-serch" class="btn-search">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+        
+        
+        <div class="main">
+            <div class="swiper mySwiper">
+                <div id="swiper-wrapper" class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        <div class="w-header">
+                            <div class="wrap">
+                                <div class="township-title">桃園市.復興區</div>
+                            </div>
+                
+                            <div class="w-info-wrap">
+                                <span id="temperature" class="bolder-caption">23°</span>
+                                <span id="description" class="desc-text">Wx</span>
+                            </div>
+                        </div>
+                        <div class="w-body">
+                            <ul id="week-weather" class="week-weather">
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">
+                                            <i class="fas fa-cloud-rain"></i>
+                                        </span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">
+                                            <i class="fas fa-sun"></i>
+                                        </span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">
+                                            <i class="fas fa-cloud"></i>
+                                        </span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">
+                                            <i class="fas fa-cloud-sun"></i>
+                                        </span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">
+                                            <i class="fas fa-cloud-sun-rain"></i>
+                                        </span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">Wx</span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                <li class="day-info">
+                                     <span class="day">Monday</span>
+                                     <div class="w-desc">
+                                        <span id="wx" class="wx">Wx</span>
+                                        <span id="pop" class="pop">10%</span>
+                                        <span id="temp" class="temp">13~19</span>
+                                     </div>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div> -->
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            activeIndex:0,
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true
+            },
+            on:{
+                slideChangeTransitionEnd:function(){
+                    const options=townshipSlecetEl.childNodes;
+                    options[this.activeIndex].selected='selected';
+                    // console.log(options[this.activeIndex]);
+                }
+            }
+        });
+    </script>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/410059cd62.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

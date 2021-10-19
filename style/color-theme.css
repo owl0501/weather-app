@@ -1,0 +1,24 @@
+:root {
+
+
+    --dark-gradient: linear-gradient(121deg, rgba(231, 237, 240, 0.816) 0%, rgba(191, 195, 197, 0.823) 84%);
+    --front-black:linear-gradient(0deg, rgba(236,236,236,0.9682539682539683) 20%, rgba(100, 155, 187, 0.748) 100%);
+    
+    --white:#fff;
+    --black:#000;
+    --light-gray1:rgba(250, 250, 250,1);
+    --light-gray2:rgba(250, 250, 250,.8);
+    --light-gray3:rgba(250, 250, 250,.5);
+
+    --dark-gray1:rgba(60, 60, 60,1);
+    --dark-gray2:rgba(60, 60, 60,.9);
+    --dark-gray3:rgba(60, 60, 60,.5);
+}
+   
+.dark-theme{
+    --bg:var(--dark-gradient);
+    --fg:var(--front-black);
+    --major-ft-color:var(--light-gray1);
+    --normal-ft-color:var(--light-gray2);
+    --hint-ft-color:var(--light-gray3);
+}

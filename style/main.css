@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+/*temp-font*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+@import 'color-theme.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: lighter;
+}
+body{
+    background: var(--bg);
+    min-height: 100vh;
+    font-family: 'Poppings', sans-serif;
+    font-size:1rem;
+}
+/*容器*/
+.mobile-wrap{
+    width: 100%;
+    height: 600px;
+    max-width: 500px;
+    min-height: 100vh;
+    background: var(--fg);
+    padding-top: 1rem;
+    margin: auto;
+}
+
+/**/
+.header{
+    background: var(--hint-ft-color);
+    color: var(--normal-ft-color);
+    padding: 4px 0;
+    width: 90%;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.header span{
+    font-size: 16px;
+}
+/*縣市搜尋框*/
+.search-wrap{
+    color: var(--normal-ft-color);
+    width: 50%;
+    display: flex;
+
+}
+.search-wrap>input{
+    background: var(--hint-ft-color);
+    color: var(--dark-gray3);
+    width: 65%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+    font-size: 16px;
+    margin: 0 5px 0 15px;
+}
+.search-wrap>input::placeholder{
+    font-size: 12px;
+}
+
+/*鄉鎮下拉式選單*/
+.townselect-wrap{
+    width: 40%;
+}
+.select-townships{
+    background: var(--hint-ft-color);
+    font-size: 16px;
+    color:var(--dark-gray3);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bolder;
+    padding: 0 5px;
+}
+/*搜尋按鈕*/
+.btn-search{
+    width: 10%;
+    cursor: pointer;
+}
+
+/*主內容容器*/
+.main{
+    background-color: transparent;
+    width: 100%;
+    height: 85%;
+}
+/*swiper*/
+.swiper {
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 20px;
+  /* background: #666; */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  /* -webkit-justify-content: center; */
+  /* justify-content: center; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  /* -webkit-align-items: center; */
+  /* align-items: center; */
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*w-header*/
+.w-header{
+    width: 100%;
+    height: 35%;
+    border-bottom: 2px solid var(--hint-ft-color);
+    color: var(--major-ft-color);
+    position: relative;
+}
+/*鄉鎮地名*/
+.township-title{
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+/*今日氣候*/
+.w-info-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: center; */
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 2.5rem;
+}
+/*溫度樣式*/
+.bolder-caption{
+    font-weight: bolder;
+    font-size:2.5rem;
+    font-family: 'Archivo Black', sans-serif;
+    text-align: center;
+}
+/*氣候描述*/
+.desc-text{
+    text-align: center;
+}
+
+/*w-body*/
+.week-weather{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+/* 一天氣候資訊*/
+.day-info{
+    color: var(--dark-gray2);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-around;
+}
+.w-desc{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.w-desc .wx{
+    padding-right: 5px;
+    font-size: 1rem;
+    width: 30px;
+}
+.w-desc .pop{
+    padding-right: 10px;
+}
+.w-desc .temp{
+    font-size: .9rem;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+
